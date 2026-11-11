@@ -1,0 +1,15 @@
+=== Logcat Trace: UsbHostManager & UsbAlsaManager Timing Race ===
+
+11-11 11:20:04.102  1050  1050 I UsbHostManager: Added device UsbDevice[mName=/dev/bus/usb/001/002,mVendorId=3787,mProductId=8438,mClass=0,mSubclass=0,mProtocol=0,mManufacturerName=KTMICRO,mProductName=JBL TUNE 310C USB-C,mVersion=1.00,mSerialNumber=2020-02-20-0000-0000-0000,mConfigurations=[...]
+11-11 11:20:04.104  1050  1050 D UsbAlsaManager: usbDeviceAdded(): UsbDevice[mName=/dev/bus/usb/001/002...]
+11-11 11:20:04.105  1050  1050 D AlsaCardsParser: scan(): Scanning ALSA cards...
+11-11 11:20:04.106  1050  1050 D AlsaCardsParser: scan(): Reading /proc/asound/cards
+11-11 11:20:04.107  1050  1050 W AlsaCardsParser: scan(): Card 0 /proc/asound/card0/usbbus not found or empty!
+11-11 11:20:04.108  1050  1050 D AlsaCardsParser: scan(): Found 0 ALSA devices matching USB address 001/002
+11-11 11:20:04.108  1050  1050 W UsbAlsaManager: No ALSA device found for UsbDevice /dev/bus/usb/001/002
+11-11 11:20:04.109  1050  1050 D UsbAlsaManager: UsbDevice /dev/bus/usb/001/002 not handled. Aborting audio route update.
+
+[NOTE: Notice that 250 milliseconds later, the kernel finishes initializing the procfs entries:]
+11-11 11:20:04.380     0     0 I snd-usb-audio: 1:1: cannot get min/max values for control 2 (id 2)
+11-11 11:20:04.385     0     0 I snd-usb-audio: USB Audio device 0ecb:20f6 configured as Card 0, usbbus 001/002
+[Because UsbAlsaManager only scans once on device attachment uevent, it never retried.]

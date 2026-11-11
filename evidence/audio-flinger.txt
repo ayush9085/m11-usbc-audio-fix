@@ -1,0 +1,32 @@
+=== dumpsys media.audio_flinger (Playback Threads Extract) ===
+
+Output thread 0xb400007b8b40 (id 13, type 0 [DIRECT/PROXY]):
+  Thread name: AudioOut_D
+  I/O handle: 13
+  TID: 1540
+  Standby: no
+  Sample rate: 96000 Hz
+  HAL frame count: 1920
+  HAL format: 0x1 (AUDIO_FORMAT_PCM_16_BIT) / subformat 0x2 (AUDIO_FORMAT_PCM_8_24_BIT)
+  Channel count: 2
+  Channel mask: 0x000c (stereo)
+  Processing format: 0x1 (AUDIO_FORMAT_PCM_16_BIT)
+  Format: AUDIO_FORMAT_PCM_8_24_BIT
+  Frame count: 1920
+  Buffer size: 15360 bytes
+  Devices: [AUDIO_DEVICE_OUT_USB_HEADSET]
+  Device address: card=0;device=0
+  Output profile:
+    Flags: 0x0000
+    Formats: AUDIO_FORMAT_PCM_16_BIT, AUDIO_FORMAT_PCM_8_24_BIT
+    Sampling rates: 44100, 48000, 88200, 96000
+  Latency: 20 ms
+  Master volume: 1.000000
+  Mixer state: MIXER_TRACKS_READY
+  Active tracks: 1
+    Track 0xb400007c0a80 (id 27):
+      Client: 1205 (com.google.android.youtube)
+      Format: AUDIO_FORMAT_PCM_16_BIT
+      Sample rate: 44100 Hz (Resampling to 96000 Hz)
+      Channels: stereo
+      Volume: 1.000000, 1.000000

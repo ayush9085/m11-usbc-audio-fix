@@ -1,0 +1,30 @@
+=== USB Device Enumeration Verification ===
+Command: cat /sys/kernel/debug/usb/devices
+
+T:  Bus=01 Lev=01 Prnt=01 Port=00 Cnt=01 Dev#=  2 Spd=12   MxCh= 0
+D:  Ver= 2.00 Cls=00(>ifc ) Sub=00 Prot=00 MxPS=64 #Cfgs=  1
+P:  Vendor=0ecb ProdID=20f6 Rev= 1.00
+S:  Manufacturer=KTMICRO
+S:  Product=JBL TUNE 310C USB-C
+S:  SerialNumber=2020-02-20-0000-0000-0000
+C:* #Ifs= 4 Cfg#= 1 Atr=80 MxPwr=100mA
+I:* If#= 0 Alt= 0 #EPs= 0 Cls=01(audio) Sub=01 Prot=00 Driver=snd-usb-audio
+I:* If#= 1 Alt= 0 #EPs= 0 Cls=01(audio) Sub=02 Prot=00 Driver=snd-usb-audio
+I:  If#= 1 Alt= 1 #EPs= 1 Cls=01(audio) Sub=02 Prot=00 Driver=snd-usb-audio
+E:  Ad=81(I) Atr=05(Isoc) MxPS= 200 Ivl=1ms
+I:* If#= 2 Alt= 0 #EPs= 0 Cls=01(audio) Sub=02 Prot=00 Driver=snd-usb-audio
+I:  If#= 2 Alt= 1 #EPs= 1 Cls=01(audio) Sub=02 Prot=00 Driver=snd-usb-audio
+E:  Ad=02(O) Atr=0d(Isoc) MxPS= 600 Ivl=1ms
+I:* If#= 3 Alt= 0 #EPs= 1 Cls=03(HID  ) Sub=00 Prot=00 Driver=usbhid
+E:  Ad=83(I) Atr=03(Int.) MxPS=  64 Ivl=1ms
+
+=== Kernel USB OTG sysfs state ===
+$ cat /sys/class/android_usb/android0/state
+CONFIGURED
+
+$ ls -la /dev/bus/usb/001/
+total 0
+drwxr-xr-x 2 root root       80 2026-11-11 11:20 .
+drwxr-xr-x 3 root root       60 2026-11-11 11:15 ..
+crw-rw-r-- 1 root root 189,   0 2026-11-11 11:15 001
+crw-rw-r-- 1 root audio 189,   1 2026-11-11 11:20 002

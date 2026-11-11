@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+    Samsung Galaxy M11 (SM-M115F / m11q)
+    Patched /vendor/etc/audio_policy_configuration.xml snippet.
+    Note the inclusion of usb_audio_policy_configuration.xml in the modules block.
+-->
+<audioPolicyConfiguration version="1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <globalConfiguration speaker_drc_enabled="true"/>
+    <modules>
+        <!-- Primary Audio HAL (msm8953) -->
+        <module name="primary" halVersion="2.0">
+            <attachedDevices>
+                <item>Speaker</item>
+                <item>Built-In Mic</item>
+            </attachedDevices>
+            <defaultOutputDevice>Speaker</defaultOutputDevice>
+            <mixPorts>
+                <!-- Mix ports defined here -->
+            </mixPorts>
+            <devicePorts>
+                <!-- Device ports defined here -->
+            </devicePorts>
+            <routes>
+                <!-- Routes defined here -->
+            </routes>
+        </module>
+
+        <!-- A2DP Audio HAL -->
+        <xi:include href="a2dp_audio_policy_configuration.xml"/>
+
+        <!-- Remote Submix Audio HAL -->
+        <xi:include href="r_submix_audio_policy_configuration.xml"/>
+
+        <!--
+            CRITICAL FIX: USB Audio Policy Configuration
+            Required for AudioPolicyManager to instantiate HW Module 5 ("usb").
+            Without this line, Android rejects USB audio device routing even if ALSA card 0 is ready.
+        -->
+        <xi:include href="usb_audio_policy_configuration.xml"/>
+
+    </modules>
+</audioPolicyConfiguration>

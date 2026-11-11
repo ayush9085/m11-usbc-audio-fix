@@ -1,0 +1,35 @@
+=== dumpsys media.audio_policy (HW Modules Extract) ===
+
+HW Modules dump:
+  - HW Module 1: "primary"
+  - HW Module 2: "a2dp"
+  - HW Module 3: "usb"
+    - name: usb
+    - handle: 13
+    - version: 2.0
+    - outputs:
+      - usb_accessory:
+        - sampling rates: 44100
+        - channel masks: 0x000c (stereo)
+        - formats: 0x00000001 (PCM_16_BIT)
+        - devices: AUDIO_DEVICE_OUT_USB_ACCESSORY
+      - usb_device:
+        - sampling rates: 44100, 48000, 64000, 88200, 96000, 176400, 192000
+        - channel masks: 0x0001, 0x0002, 0x000c, 0x003f, 0x00fc
+        - formats: 0x00000001, 0x00000002, 0x00000004 (PCM_16, PCM_8_24, PCM_32)
+        - devices: AUDIO_DEVICE_OUT_USB_DEVICE, AUDIO_DEVICE_OUT_USB_HEADSET
+        - flags: 0x0000 (AUDIO_OUTPUT_FLAG_NONE)
+    - inputs:
+      - usb_device:
+        - sampling rates: 8000, 11025, 16000, 22050, 32000, 44100, 48000, 96000
+        - channel masks: 0x0010 (mono), 0x000c (stereo)
+        - formats: 0x00000001, 0x00000002 (PCM_16, PCM_8_24)
+        - devices: AUDIO_DEVICE_IN_USB_DEVICE, AUDIO_DEVICE_IN_USB_HEADSET
+
+=== Active Audio Routing Policy ===
+Audio routes dump:
+  - Route: Output 13 -> AUDIO_DEVICE_OUT_USB_HEADSET (address: card=0;device=0)
+  - Stream STREAM_MUSIC:
+    - Routing: 0x04000000 (AUDIO_DEVICE_OUT_USB_HEADSET)
+    - Volume: 15/15
+    - Mute count: 0

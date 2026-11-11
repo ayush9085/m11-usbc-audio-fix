@@ -1,0 +1,13 @@
+# usb_audio.rc
+# Init service configuration for USB-C audio hotplug monitor on Android 12.
+# Placed in /system/etc/init/ or /vendor/etc/init/
+
+service usb_audio_daemon /system/bin/usb_audio_daemon.sh
+    class late_start
+    user root
+    group root audio system
+    disabled
+    seclabel u:r:su:s0
+
+on property:sys.boot_completed=1
+    start usb_audio_daemon

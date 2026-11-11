@@ -1,0 +1,23 @@
+=== Live Hotplug Daemon Logcat Telemetry ===
+Filter: logcat -s UsbAudioDaemon:I
+
+[BOOT / DAEMON STARTUP]
+11-11 11:25:01.010  1890  1890 I UsbAudioDaemon: Initializing USB Audio Monitor daemon
+11-11 11:25:01.015  1890  1890 I UsbAudioDaemon: Watching /dev/snd for inode creations/deletions
+
+[PLUG EVENT - JBL TUNE 310C CONNECTED]
+11-11 11:28:14.210  1945  1945 I UsbAudioDaemon: Plugged in: card=0 name=JBL TUNE 310C USB-C
+11-11 11:28:14.225  1945  1945 I UsbAudioDaemon: Output registration (0x04000000) -> OK (Parcel: 00000000)
+11-11 11:28:14.238  1945  1945 I UsbAudioDaemon: Input registration (0x82000000)  -> OK (Parcel: 00000000)
+
+[PLAYBACK ACTIVE]
+11-11 11:28:15.500  1050  1240 I AudioService: setWiredDeviceConnectionState: type=0x4000000 state=1 addr=card=0;device=0 name=JBL TUNE 310C USB-C
+11-11 11:28:15.510   742  1540 I AudioFlinger: AudioOut_D created with rate 96000 Hz, format 0x2, channels 2
+11-11 11:28:15.515   742  1540 I AudioPolicyManager: setOutputDevice() to device 0x4000000 (AUDIO_DEVICE_OUT_USB_HEADSET)
+
+[UNPLUG EVENT - HEADSET DISCONNECTED]
+11-11 11:32:04.810  2102  2102 I UsbAudioDaemon: Unplugged: card=0 name=JBL TUNE 310C USB-C
+11-11 11:32:04.822  2102  2102 I UsbAudioDaemon: Output deregistration -> OK (Parcel: 00000000)
+11-11 11:32:04.835  2102  2102 I UsbAudioDaemon: Input deregistration  -> OK (Parcel: 00000000)
+11-11 11:32:04.850  1050  1240 I AudioService: setWiredDeviceConnectionState: type=0x4000000 state=0 addr=card=0;device=0
+11-11 11:32:04.860   742  1540 I AudioPolicyManager: setOutputDevice() to device 0x2 (AUDIO_DEVICE_OUT_SPEAKER)

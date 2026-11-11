@@ -1,0 +1,53 @@
+=== ALSA Cards List ===
+$ cat /proc/asound/cards
+ 0 [USBC           ]: USB-Audio - JBL TUNE 310C USB-C
+                      KTMICRO JBL TUNE 310C USB-C at usb-xhci-hcd.0.auto-1, full speed
+ 1 [msm8953sndcardm]: msm8953-snd-car - msm8953-snd-card-mtp
+                      msm8953-snd-card-mtp
+
+=== ALSA Card 0 Device Identity ===
+$ cat /proc/asound/card0/id
+USBC
+
+$ cat /proc/asound/card0/usbid
+0ecb:20f6
+
+=== ALSA Stream Capabilities ===
+$ cat /proc/asound/card0/stream0
+KTMICRO JBL TUNE 310C USB-C at usb-xhci-hcd.0.auto-1, full speed : USB Audio
+
+Playback:
+  Status: Running
+    Interface = 2
+    Altset = 1
+    Packet Size = 588
+    Momentary freq = 96000 Hz (0x60.0000)
+  Interface 2
+    Altset 1
+    Format: S24_3LE
+    Channels: 2
+    Endpoint: 2 OUT (ASYNC)
+    Rates: 44100, 48000, 88200, 96000
+    Data packet interval: 1000 us
+
+Capture:
+  Status: Stop
+  Interface 1
+    Altset 1
+    Format: S16_LE
+    Channels: 1
+    Endpoint: 1 IN (ASYNC)
+    Rates: 48000, 96000
+    Data packet interval: 1000 us
+
+=== ALSA Active Hardware DMA Status (During Playback) ===
+$ cat /proc/asound/card0/pcm0p/sub0/status
+state: RUNNING
+owner_pid   : 742 (audioserver)
+trigger_time: 1245.892014812
+tstamp      : 1251.104231809
+delay       : 960
+avail       : 3840
+avail_max   : 3840
+hw_ptr      : 500480
+appl_ptr    : 501440
