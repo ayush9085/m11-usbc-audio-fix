@@ -48,3 +48,4 @@ adb shell killall audioserver
 adb reboot
 ```
 The device will now function in its default stock state.
+

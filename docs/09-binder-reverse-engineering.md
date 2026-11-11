@@ -44,3 +44,4 @@ Result: Parcel(00000000   '....')
 - Sample rate locked to 96,000 Hz, 24-bit PCM.
 - Audio in active media apps immediately routed to the JBL USB-C headset.
 - When injecting state `0`, audio routed back to the loudspeaker smoothly without crashing.
+

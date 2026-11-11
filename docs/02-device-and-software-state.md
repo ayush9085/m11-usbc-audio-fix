@@ -27,3 +27,4 @@
 - **USB Vendor ID (VID)**: `0ecb`
 - **USB Product ID (PID)**: `20f6`
 - **Capabilities**: Dual-channel 24-bit 96 kHz PCM DAC, single-channel 16/24-bit 48/96 kHz ADC, USB HID in-line remote buttons
+

@@ -14,3 +14,4 @@ All identifiers have been sanitized:
 4. `audio-flinger.txt`: `dumpsys media.audio_flinger` extracts demonstrating the active output proxy stream at 96 kHz, 24-bit PCM.
 5. `usb-framework.txt`: Logcat traces of `UsbHostManager` and `UsbAlsaManager` capturing the initial race condition.
 6. `hotplug.txt`: Live execution log of `usb_audio_daemon.sh` and `usb_audio_event.sh` across plug, playback, and unplug cycles.
+

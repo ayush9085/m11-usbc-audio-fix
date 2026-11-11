@@ -22,3 +22,4 @@ In the Android audio architecture:
 - Specifically, `AudioService.setWiredDeviceConnectionState()` must be called to inform the native policy manager that a physical peripheral has been attached to a specific card and device address.
 
 This directed the investigation upward into `system_server`.
+

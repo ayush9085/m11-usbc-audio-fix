@@ -51,3 +51,4 @@ else
     fi
     echo "[+] Rollback complete on device."
 fi
+

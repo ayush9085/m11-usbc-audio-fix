@@ -57,3 +57,4 @@ flowchart TD
 3. **Automation Layer**: Non-polling file monitor invoking Binder transaction 71 upon device node creation.
 4. **Native Layer**: Hardware abstraction loading standard Qualcomm and USB audio policy specifications.
 5. **Framework Layer**: Android audio routing decision engine and hardware stream management.
+

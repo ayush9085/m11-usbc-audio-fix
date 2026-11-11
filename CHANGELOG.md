@@ -11,3 +11,4 @@ All notable changes to this project are documented in this file.
 - **Binder IPC Automation**: Implemented low-latency hotplug handler using Binder transaction code 71 (`IAudioService.setWiredDeviceConnectionState`) for both `AUDIO_DEVICE_OUT_USB_HEADSET` (`67108864`) and `AUDIO_DEVICE_IN_USB_HEADSET` (`-2113929216`).
 - **Init Daemon**: Integrated `usb_audio_daemon.sh` and `usb_audio.rc` with `toybox inotifyd` file-descriptor monitoring on `/dev/snd` to automate plug and unplug events with zero idle CPU overhead.
 - **Verification**: Validated 96 kHz / 24-bit PCM stereo playback and mono microphone capture on external USB-C digital audio peripherals (tested with JBL TUNE 310C).
+

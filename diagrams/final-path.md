@@ -39,3 +39,4 @@ sequenceDiagram
     Binder->>APM: Restores default route (Speaker / Earpiece)
     APM->>AF: Switches stream to built-in speaker smoothly
 ```
+

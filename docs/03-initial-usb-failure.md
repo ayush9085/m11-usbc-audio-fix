@@ -40,3 +40,4 @@ dwc3 7000000.dwc3: otg: ID pin status unchanged
 dwc3 7000000.dwc3: entering low-power suspend mode
 ```
 The Qualcomm DWC3 driver failed to detect the OTG host-mode transition. The driver treated the attachment as an idle bus state and remained suspended. Consequently, the USB audio device never received power or enumeration commands.
+

@@ -30,3 +30,4 @@ Stock Samsung Galaxy M11 firmware relied exclusively on an analog 3.5mm headset 
 
 ### 3. Framework Layer (Asynchronous Timing Race)
 When a USB audio peripheral was plugged in, `UsbHostManager` in `system_server` caught the initial USB device attachment uevent and synchronously invoked `AlsaCardsParser.scan()`. Because the kernel's `snd-usb-audio` driver populates `/proc/asound/cardX/usbbus` asynchronously after USB enumeration, the procfs entry was not yet present when `scan()` ran. Finding no cards, `UsbAlsaManager` aborted without retrying, leaving the framework oblivious to the newly attached audio device.
+

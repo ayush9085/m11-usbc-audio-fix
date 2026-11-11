@@ -33,3 +33,4 @@ The hardware pointer (`hw_ptr`) continuously incremented, proving direct uninhib
 
 ### 5. Deep Sleep (Doze Mode) Verification
 Monitoring CPU frequency scaling and kernel wake-locks over a 30-minute idle window with the earphones connected showed that the Snapdragon 450 cores entered `wfi` (Wait For Interrupt) and deep sleep states normally. `inotifyd` held zero wake-locks and caused zero battery drain.
+

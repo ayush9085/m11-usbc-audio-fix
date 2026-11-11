@@ -39,3 +39,4 @@ adb shell "tinyplay /data/local/tmp/test.wav -D 0 -d 0"
 2. The Linux kernel `snd-usb-audio` driver was operating correctly.
 3. The hardware DAC in the JBL earphones was operational.
 4. The remaining failure was located entirely in the higher-level Android audio framework and HAL.
+

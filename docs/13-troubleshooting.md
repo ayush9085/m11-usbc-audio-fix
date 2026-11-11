@@ -24,3 +24,4 @@ adb logcat -s UsbAudioDaemon:I
 # 4. Force manual registration override
 adb shell /system/bin/usb_audio_event.sh force
 ```
+

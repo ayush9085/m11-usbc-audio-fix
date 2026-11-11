@@ -33,3 +33,4 @@ Audio routes dump:
     - Routing: 0x04000000 (AUDIO_DEVICE_OUT_USB_HEADSET)
     - Volume: 15/15
     - Mute count: 0
+

@@ -43,3 +43,4 @@ adb shell dumpsys media.audio_policy | grep "HW Module"
 `AudioPolicyManager` now successfully registered the USB HAL module and declared support for `AUDIO_DEVICE_OUT_USB_HEADSET` and `AUDIO_DEVICE_IN_USB_HEADSET`.
 
 However, plugging in the headset still resulted in no audio output through USB.
+

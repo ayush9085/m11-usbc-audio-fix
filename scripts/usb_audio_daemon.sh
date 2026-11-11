@@ -10,3 +10,4 @@ while true; do
     toybox inotifyd /system/bin/usb_audio_event.sh /dev/snd:nd
     sleep 2
 done
+

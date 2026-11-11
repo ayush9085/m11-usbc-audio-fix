@@ -80,3 +80,4 @@ else
 fi
 
 release_lock
+

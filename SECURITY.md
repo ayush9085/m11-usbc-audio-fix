@@ -12,3 +12,4 @@ This project introduces system-level modifications on unlocked devices:
 
 ## Reporting Vulnerabilities
 If you discover a security issue or privilege escalation flaw within the provided scripts or configurations, please open a private security advisory or contact the maintainers directly through GitHub.
+

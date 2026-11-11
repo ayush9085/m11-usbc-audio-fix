@@ -36,3 +36,4 @@ sequenceDiagram
 ## Root Cause Summary
 - **Kernel Failure**: Downstream Qualcomm USB PHY driver regression caused host-mode negotiation failure.
 - **Framework Race**: `AlsaCardsParser.scan()` executed synchronously upon the initial USB device attachment event, prior to the asynchronous creation of ALSA card metadata files in `/proc/asound/`. Because the scan was not repeated upon card creation, the framework permanently ignored the attached USB audio peripheral.
+

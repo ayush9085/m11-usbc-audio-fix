@@ -21,3 +21,4 @@ Filter: logcat -s UsbAudioDaemon:I
 11-11 11:32:04.835  2102  2102 I UsbAudioDaemon: Input deregistration  -> OK (Parcel: 00000000)
 11-11 11:32:04.850  1050  1240 I AudioService: setWiredDeviceConnectionState: type=0x4000000 state=0 addr=card=0;device=0
 11-11 11:32:04.860   742  1540 I AudioPolicyManager: setOutputDevice() to device 0x2 (AUDIO_DEVICE_OUT_SPEAKER)
+

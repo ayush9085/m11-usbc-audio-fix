@@ -30,3 +30,4 @@ Output thread 0xb400007b8b40 (id 13, type 0 [DIRECT/PROXY]):
       Sample rate: 44100 Hz (Resampling to 96000 Hz)
       Channels: stereo
       Volume: 1.000000, 1.000000
+

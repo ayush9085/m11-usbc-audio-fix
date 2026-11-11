@@ -27,3 +27,4 @@ D UsbAlsaManager: UsbDevice /dev/bus/usb/001/002 not handled. Aborting audio rou
 - At the millisecond `AlsaCardsParser` executed, `usbbus` was not yet populated on disk.
 - Finding 0 matching cards, `AlsaCardsParser` returned an empty list.
 - Because `UsbAlsaManager` only reacts to uevents and does not schedule retries or monitor `/proc/asound/` for changes, the framework permanently abandoned the device.
+

@@ -46,3 +46,4 @@ service usb_audio_daemon /system/bin/usb_audio_daemon.sh
 on property:sys.boot_completed=1
     start usb_audio_daemon
 ```
+

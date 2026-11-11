@@ -33,3 +33,4 @@ Upon plugging in the JBL TUNE 310C headset:
 - The USB controller transitioned to host mode.
 - Kernel logcat and dmesg reported successful enumeration of device `0ecb:20f6`.
 - `snd-usb-audio` driver initialized successfully.
+

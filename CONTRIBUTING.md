@@ -16,3 +16,4 @@ Contributions to this project are welcome to help improve USB audio compatibilit
 - [ ] Peripheral unplug during active media playback (graceful failover to internal speaker).
 - [ ] Microphone input recording test (`dumpsys media.audio_flinger` capture stream).
 - [ ] Sleep / deep-sleep battery drain verification (no busy-waiting or wake-locks held).
+
